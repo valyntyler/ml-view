@@ -16,6 +16,7 @@
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
+            just
             poetry
             python3
           ];
