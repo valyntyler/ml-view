@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -19,6 +18,7 @@
             just
             poetry
             python3
+            python313Packages.wgpu-py
           ];
         };
       }
