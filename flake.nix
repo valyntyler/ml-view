@@ -29,13 +29,19 @@
         };
       in {
         devShells.default = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            just
-            poetry
-            python3
-            python313Packages.wgpu-py
-            rendercanvas
-          ];
+          buildInputs = with pkgs;
+            [
+              just
+              poetry
+              python3
+            ]
+            ++ (with python3Packages; [
+              glfw
+              numpy
+              pyside6
+              wgpu-py
+              rendercanvas
+            ]);
         };
       }
     );
